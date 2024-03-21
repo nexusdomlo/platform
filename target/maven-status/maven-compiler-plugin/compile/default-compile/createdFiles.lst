@@ -1,0 +1,5 @@
+com\example\platform\controller\UserController.class
+com\example\platform\service\UserService.class
+com\example\platform\pojo\User.class
+com\example\platform\service\impl\UserServiceImpl.class
+com\example\platform\mapper\UserMapper.class

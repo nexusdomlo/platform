@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--MyBatis的DTD约束-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    mapper：核心根标签
+    namespace属性：名称空间
+-->
+<mapper namespace="com.example.platform.mapper.MessageMapper">
+    <select id="listContent" resultType="com.example.platform.pojo.Message">
+        select * from vehiclemessage
+<!--
+这种映射配置文件where标签能够动态使用，有的话就加，没有某个参数就不用
+-->
+        <where>
+            <if test="student_num!=null">
+                student_num=#{student_num}
+            </if>
+            <if test="car_id!=null">
+                and car_id=#{car_id}
+            </if>
+            <if test="name!=null">
+                and name=#{name}
+            </if>
+            <if test="car_name!=null">
+                and car_name=#{car_name}
+            </if>
+            <if test="phone!=null">
+                and phone=#{phone}
+            </if>
+            <if test="position!=null">
+                and position=#{position}
+            </if>
+            <if test="state!=null">
+                and state=#{state}
+            </if>
+        </where>
+    </select>
+</mapper>
