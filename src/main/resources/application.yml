@@ -1,0 +1,18 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 8080
+#  servlet:
+#    context-path: /springboot4c04d
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bikecontrol
+    username: root
+    password: 22371X
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+
